@@ -28,10 +28,11 @@ namespace MyScriptureJournal.Pages.Scriptures
         [BindProperty(SupportsGet = true)]
         public string Notes { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string Filter { get; set; }
+
         public async Task OnGetAsync()
         {
-
-            //Search in Sriptures
             var scriptures = from m in _context.Scripture
                          select m;
 
@@ -44,6 +45,29 @@ namespace MyScriptureJournal.Pages.Scriptures
             if (!string.IsNullOrEmpty(Notes))
             {
                 scriptures = scriptures.Where(s => s.Note.Contains(Notes));
+            }
+
+            //Filter
+            if((Filter == "Book" || Filter == "Date"))
+            {
+                if(Filter == "Book")
+                {
+                    // Use LINQ to get a query that get the order by RealeaseDate
+                    IQueryable<Scripture> genreQuery = from m in _context.Scripture
+                                                       orderby m.ScriptureReference
+                                                       select m;
+                    scriptures = genreQuery;
+
+                }
+                else if (Filter == "Date")
+                {
+                    // Use LINQ to get a query that get the order by date
+                    IQueryable<Scripture> genreQuery = from m in _context.Scripture
+                                                       orderby m.ReleaseDate
+                                                       select m;
+                    scriptures = genreQuery;
+                }
+
             }
 
             Scripture = await scriptures.ToListAsync();
