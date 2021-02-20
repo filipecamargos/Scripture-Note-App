@@ -165,3 +165,8 @@ C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\M
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Scriptures\Create.cshtml.g.cs
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Scriptures\Delete.cshtml.g.cs
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Scriptures\Details.cshtml.g.cs
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Scriptures\Edit.cshtml.g.cs
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Scriptures\Index.cshtml.g.cs
