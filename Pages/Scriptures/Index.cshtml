@@ -5,20 +5,9 @@
     ViewData["Title"] = "My Scriptures";
 }
 
-<h1>My Scriptures Notes</h1>
+<h1 class="title">My Scriptures Notes</h1>
 <hr />
-<div style="display:flex">
-    <a asp-page="Create" class="btn btn-primary">Add New</a>
-    <form class="form-inline" style="margin-left:15px">
-        <select asp-for="Filter" id="sel1" class="form-control mr-sm-2">
-            <option disabled selected>Filter</option>
-            <option>Book</option>
-            <option>Date</option>
-        </select>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Filter</button>
-    </form>
-</div>
-<div style="display:flex; margin-top:15px">
+<div style="display:flex; margin-top:10px">
     <form class="form-inline">
         <input asp-for="SearchString" class="form-control mr-sm-2" type="search" placeholder="Search Scripture" aria-label="Search" />
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Search</button>
@@ -27,6 +16,19 @@
         <input asp-for="Notes" class="form-control mr-sm-2" type="search" placeholder="Search Scripture" aria-label="Search" />
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Search</button>
     </form>
+</div>
+<div style="display:flex; margin-top:15px">
+    <form class="form-inline">
+        <select asp-for="Filter" id="sel1" class="form-control mr-sm-2">
+            <option disabled selected>Filter</option>
+            <option>Book</option>
+            <option>Date</option>
+        </select>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Filter</button>
+    </form>
+    <div style="margin-left:15px">
+        <a asp-page="Create" class="btn btn-primary">Add New</a>
+    </div>
 </div>
 <br />
 <table class="table">
