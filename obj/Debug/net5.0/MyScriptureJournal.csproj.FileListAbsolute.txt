@@ -25,7 +25,6 @@ C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\M
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\MyScriptureJournal.RazorCoreGenerate.cache
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week07\MyScriptureJournal\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
