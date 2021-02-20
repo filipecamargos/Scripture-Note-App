@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MyScriptureJournal.Data;
 using MyScriptureJournal.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyScriptureJournal.Pages.Scriptures
 {
@@ -21,9 +22,31 @@ namespace MyScriptureJournal.Pages.Scriptures
 
         public IList<Scripture> Scripture { get;set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string Notes { get; set; }
+
         public async Task OnGetAsync()
         {
-            Scripture = await _context.Scripture.ToListAsync();
+
+            //Search in Sriptures
+            var scriptures = from m in _context.Scripture
+                         select m;
+
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                scriptures = scriptures.Where(s => s.ScriptureReference.Contains(SearchString));
+            }
+
+            //Search by notes
+            if (!string.IsNullOrEmpty(Notes))
+            {
+                scriptures = scriptures.Where(s => s.Note.Contains(Notes));
+            }
+
+            Scripture = await scriptures.ToListAsync();
         }
     }
 }

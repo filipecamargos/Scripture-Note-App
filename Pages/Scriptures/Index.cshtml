@@ -5,11 +5,29 @@
     ViewData["Title"] = "My Scriptures";
 }
 
-<h1>My Scriptures</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<h1>My Scriptures Notes</h1>
+<hr />
+<div style="display:flex">
+    <a asp-page="Create" class="btn btn-primary">Add New</a>
+    <form class="form-inline" style="margin-left:15px">
+        <select asp-for="Notes" id="sel1" class="form-control mr-sm-2">
+            <option type="submit">Book</option>
+            <option type="submit">Date</option>
+        </select>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Filter</button>
+    </form>
+</div>
+<div style="display:flex; margin-top:15px">
+    <form class="form-inline">
+        <input asp-for="SearchString" class="form-control mr-sm-2" type="search" placeholder="Search Scripture" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Search</button>
+    </form>
+    <form class="form-inline" style="margin-left:15px">
+        <input asp-for="Notes" class="form-control mr-sm-2" type="search" placeholder="Search Scripture" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Filter">Search</button>
+    </form>
+</div>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -26,23 +44,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Scripture) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScriptureReference)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+
+        @foreach (var item in Model.Scripture)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ScriptureReference)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+
     </tbody>
+
 </table>
