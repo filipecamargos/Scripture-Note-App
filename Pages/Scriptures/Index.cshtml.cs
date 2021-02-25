@@ -50,23 +50,20 @@ namespace MyScriptureJournal.Pages.Scriptures
             //Filter
             if((Filter == "Book" || Filter == "Date"))
             {
-                if(Filter == "Book")
-                {
-                    // Use LINQ to get a query that get the order by RealeaseDate
-                    IQueryable<Scripture> genreQuery = from m in _context.Scripture
-                                                       orderby m.ScriptureReference
-                                                       select m;
-                    scriptures = genreQuery;
+                // Use LINQ to get a query that get the order by RealeaseDate
+                IQueryable<Scripture> genreQuery = from m in _context.Scripture
+                                                   select m;
 
+                if (Filter == "Book")
+                {
+                   genreQuery.OrderBy(m => m.ScriptureReference);
                 }
                 else if (Filter == "Date")
                 {
-                    // Use LINQ to get a query that get the order by date
-                    IQueryable<Scripture> genreQuery = from m in _context.Scripture
-                                                       orderby m.ReleaseDate
-                                                       select m;
-                    scriptures = genreQuery;
+                    genreQuery.OrderBy(m => m.ReleaseDate);
                 }
+
+                scriptures = genreQuery;
 
             }
 
